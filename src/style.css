@@ -1,0 +1,128 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:focus {
+  outline: none;
+}
+
+:root {
+  --dark-color: #b34040;
+  --font-color: #b34040;
+  --b-radius: 8px;
+}
+
+button {
+  border: none;
+}
+.counterBody {
+  display: flex;
+  height: 3em;
+  min-width: 10em;
+
+  max-width: 10em;
+
+  border-radius: var(--b-radius);
+  overflow: hidden;
+  border: 1px solid var(--dark-color);
+}
+
+div.counterBody > button,
+input {
+  font-weight: bold;
+  font-size: 0.98em;
+  width: 100%;
+
+  cursor: pointer;
+}
+
+.minus {
+  color: var(--dark-color);
+  border-right: 1px solid var(--dark-color);
+  background-color: white;
+}
+
+.plus {
+  border-left: 1px solid var(--dark-color);
+  background-color: #b34040;
+  color: white;
+}
+
+.count {
+  background-color: #fbe9e9;
+  color: var(--dark-color);
+  border: none;
+  text-align: center;
+}
+
+/* modal */
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 18em;
+  width: 18em;
+  border-radius: 12px;
+  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.59);
+  -webkit-box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.59);
+}
+
+div.modalBody > input,
+button.submit {
+  border-radius: var(--b-radius);
+  border: 2px solid var(--dark-color);
+  text-align: center;
+}
+
+::placeholder {
+  text-align: center;
+  font-size: 1.12em;
+}
+
+.minValue,
+.maxValue,
+.currentValue {
+  height: 3em;
+  width: 9em;
+  font-weight: bold;
+}
+
+.submit {
+  height: 3em;
+  width: 11em;
+  max-width: 11em;
+  max-height: 3em;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: var(--dark-color);
+  color: white;
+  cursor: pointer;
+}
+
+.alertMessage {
+  position: absolute;
+  top: 20%;
+  padding: 0.75em;
+  border-radius: 1em;
+  background-color: #c24646;
+  font-weight: 600;
+  color: white;
+}
